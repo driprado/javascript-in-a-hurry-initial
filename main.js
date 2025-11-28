@@ -1,6 +1,2 @@
-function testAlert(message) {
-	alert(message);
-}
-
-testAlert("Hello from main.js testAlert  function message!");
-testAlert(2+2)
+console.log("Hello from console builtin function!")
+document.getElementById("greeting").innerHTML = "How's it going?";
