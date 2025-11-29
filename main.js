@@ -1,2 +1,3 @@
-console.log("Hello from console builtin function!")
-document.getElementById("greeting").innerHTML = "How's it going?";
+document.querySelector("#open-nav-menu").addEventListener("click",function(params) {
+	alert("clicked!!!");
+});
