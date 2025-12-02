@@ -22,8 +22,23 @@ const weatherCondition = "Sunny"
 const userLocation = "New York"
 let temperature = "22.8673"
 // ${temperature.toFixed(1)} round to one decimal place
-let weatherText = `The weather is ${weatherCondition} in ${userLocation} and it's ${celciusToFahr(temperature).toFixed(1)}°C outside.`
+let celsiusText = `The weather is ${weatherCondition} in ${userLocation} and it's ${Number(temperature).toFixed(1)}°C outside.`
+let fahrText = `The weather is ${weatherCondition} in ${userLocation} and it's ${celciusToFahr(temperature).toFixed(1)}°F outside.`
 
 document.querySelector("#greeting").innerHTML = greetingText
-document.querySelector("#weather").innerHTML = weatherText
+document.querySelector("#weather").innerHTML = celsiusText
+
+
+// weather switch
+document.querySelector(".weather-group").addEventListener("click", function name(event) {
+
+	if (event.target.id == "celsius") {
+		document.querySelector("#weather").innerHTML = celsiusText;
+	} else {
+		document.querySelector("#weather").innerHTML = fahrText;
+	}
+
+});
+
+// date
 
